@@ -31,7 +31,7 @@ WORKDIR /
 
 COPY --from=builder /packetcrypt_rs/target/release/packetcrypt .
 
-COPY run.sh .
+COPY run.sh . 
 
 ENTRYPOINT [ "./run.sh" ]
 
