@@ -12,7 +12,7 @@ jobs:
       - name: release
         run: |
           echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u "${{ secrets.GHCR_USER }}" --password-stdin
-          docker build . --tag ghcr.io/rsum1/pktMiner:${GITHUB_REF#refs/tags/}
-          docker tag ghcr.io/rsum1/pktMiner:${GITHUB_REF#refs/tags/} ghcr.io/rsum1/pktMiner:latest
-          docker push ghcr.io/rsum1/pktMiner:${GITHUB_REF#refs/tags/}
-          docker push ghcr.io/rsum1/pktMiner:latest
+          docker build . --tag ghcr.io/rsum1/pktlite:${GITHUB_REF#refs/tags/}
+          docker tag ghcr.io/rsum1/pktlite:${GITHUB_REF#refs/tags/} ghcr.io/rsum1/pktlite:latest
+          docker push ghcr.io/rsum1/pktlite:${GITHUB_REF#refs/tags/}
+          docker push ghcr.io/rsum1/pktlite:latest
